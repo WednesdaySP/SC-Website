@@ -1,5 +1,3 @@
-Here’s a structured `README.md` file content for the *Star Computers* website:
-
 ---
 
 # Star Computers - Electronic Items Website
@@ -34,11 +32,11 @@ To run the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/star-computers-website.git
+   git clone https://github.com/yourusername/SC-Website.git
    ```
 2. Open the project directory:
    ```bash
-   cd star-computers-website
+   cd SC-Website
    ```
 3. Open `index.html` in your web browser to view the website locally.
 
@@ -46,12 +44,9 @@ To run the project locally:
 
 ![project-6](https://github.com/user-attachments/assets/fa817ea3-8be8-4674-a376-7c3165ebafef)
 
-*Description of the screenshot*
 
 ## License
 
 This project is open-source and available under the MIT License.
 
 ---
-
-Feel free to adjust the repository link or screenshot paths as necessary. This `README.md` structure helps convey the purpose, setup, and functionality of the website effectively.
