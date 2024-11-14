@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style-nav.css">
+    <style>
+        .h-sec{
+            margin-top: 50px;
+        }
+        .hero-sec{
+            
+            background-color: white;
+            display: flex;
+            padding: 20px;
+            height: 500px;
+            margin-left: 40px;
+            margin-right: 40px;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .hero-sec img{
+            width: auto;
+            height: auto;
+        }
+        .hero-text{
+            width: 80%;
+        }
+        .hero-text h1{
+            font-size: 3.3rem;
+            margin-bottom: 8px;
+            color: #8b4513;
+        }
+        .hero-text p{
+            font-size: 1.4rem;
+            margin-bottom:12px;
+        }
+        .hero-button{
+            padding: 1em 2.1em 1.1em;
+            border-radius: 4px;
+            margin: 8px;
+            border: none;
+            background-color: #fff;
+            color: black;
+            font-weight: 800;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            text-align: center;
+            box-shadow: 0em -0.2rem 0em burlywood inset;
+            transition: color 3s ease-in-out;
+        }
+        .hero-button a{
+            text-decoration: none;
+            color: #8b4513;
+        }
+
+        .hero-button:hover{
+            background-color: transparent;
+            color: #8b4513;
+            border: 3px solid burlywood;
+            cursor: pointer;
+        }
+        @media (max-width:1235px){
+            .hero-sec img{
+                width: 80%;
+            }
+        }
+        
+        @media (max-width:925px){
+            .hero-sec img{
+                width: 450px;
+            }
+        }
+        @media (max-width:462px){
+            .hero-sec img{
+                width: 90%;
+            }
+        }
+        @media (max-width:884px){
+            .hero-sec{
+                margin-top: 10px;
+                flex-direction: column;
+            }
+            .hero-text{
+                width: 100%;
+                text-align: center;
+            }
+            .hero-text h1{
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width:678px){
+           
+            .hero-text h1{
+                font-size: 2rem;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#home">Star Computers</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#home">Star Computers</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#shop">Product</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  
+
+<section class="h-sec">
+    <div class="hero-sec">
+        <img src="imagess/dell4.png" alt="">
+        <div class="hero-text">
+            <h1>Welcome to this website </h1>
+            <p>indulge in the findings of the top technological items you could think of , best place to start with. </p>
+            <button class="hero-button"> <a href="explore-more.html">Explore More</a></button>
+        </div>
+    </div>
+</section>
+
+ <!-- javascript -->
+ <script>
+    
+    const body = document.querySelector("body"),
+          nav = document.querySelector("nav"),
+          modeToggle = document.querySelector(".dark-light"),
+          searchToggle = document.querySelector(".searchToggle"),
+          sidebarOpen = document.querySelector(".sidebarOpen"),
+          siderbarClose = document.querySelector(".siderbarClose");
+    
+          let getMode = localStorage.getItem("mode");
+              if(getMode && getMode === "dark-mode"){
+                body.classList.add("dark");
+              }
+    
+    // js code to toggle dark and light mode
+          modeToggle.addEventListener("click" , () =>{
+            modeToggle.classList.toggle("active");
+            body.classList.toggle("dark");
+    
+            // js code to keep user selected mode even page refresh or file reopen
+            if(!body.classList.contains("dark")){
+                localStorage.setItem("mode" , "light-mode");
+            }else{
+                localStorage.setItem("mode" , "dark-mode");
+            }
+          });
+    
+    // js code to toggle search box
+            searchToggle.addEventListener("click" , () =>{
+            searchToggle.classList.toggle("active");
+          });
+     
+          
+    //   js code to toggle sidebar
+    sidebarOpen.addEventListener("click" , () =>{
+        nav.classList.add("active");
+    });
+    
+    body.addEventListener("click" , e =>{
+        let clickedElm = e.target;
+    
+        if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+            nav.classList.remove("active");
+        }
+    });
+    
+    
+</script>
+</body>
+</html>

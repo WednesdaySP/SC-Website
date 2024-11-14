@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  color: #000;
+  background-color: #dfdfdf;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #dfdfdf;
+  background-color: #000;
+}
+
+.abt {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 6rem 6rem 6rem;
+}
+
+
+.page-title {
+  margin-bottom: 8rem;
+  font-family: "Anton", sans-serif;
+  font-size: 16rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+  line-height: 16rem;
+  color: #fafafa;
+}
+@media only screen and (max-width: 760px) {
+  .page-title {
+    margin-bottom: 6rem;
+    font-size: 8rem;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .page-title {
+    margin-bottom: 4rem;
+    font-size: 7rem;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .page-title {
+    margin-bottom: 0;
+    font-size: 5rem;
+  }
+}
+
+.abtcontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 760px) {
+  .abtcontent {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+}
+.content__descriptor {
+  width: 14%;
+  border-top: 1px solid #7b7b7b;
+  padding-top: 4rem;
+}
+@media only screen and (max-width: 760px) {
+  .content__descriptor {
+    width: 100%;
+    padding: 2rem 0;
+    border-top: none;
+  }
+}
+.content__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.content__text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 2rem;
+  width: 50%;
+  border-top: 1px solid #7b7b7b;
+  border-bottom: 1px solid #7b7b7b;
+  margin-right: 10rem;
+  padding: 4rem 0;
+}
+@media only screen and (max-width: 920px) {
+  .content__text-box {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .content__text-box {
+    width: 100%;
+    padding: 2rem 0;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .content__text-box {
+    border-bottom: none;
+  }
+}
+.content__text {
+  width: 320px;
+}
+@media only screen and (max-width: 580px) {
+  .content__text {
+    width: 100%;
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #161623;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#2d2dff, #ff2f2f);
+            clip-path: circle(25% at right);
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            min-height: 100vh;
+            height: 100%;
+            background: linear-gradient(#870aec, #6e0b81);
+            clip-path: circle(20% at 10% 10%);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0 10px;
+            position: relative;
+            z-index: 100;
+        }
+        .container .card {
+            width: 300px;
+            height: 300px;
+            margin: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container .row .card:hover {
+            transform: translateY(-10px);
+        }
+        .container .card .card-body {
+            padding: 1rem 1.2rem;
+            color: #fff;
+        }
+        .container .card .card-body .card-img img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            transform: translateY(50px);
+            transition: 0.5s;
+            border-radius: 50%;
+        }
+        .container .card .card-body .name {
+            transform: translateY(50px);
+            transition: 0.5s;
+        }
+        .container .card .card-body .testimonial {
+            font-size: 0.9rem;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: 0.5s;
+            opacity: 0;
+        }
+        .container .row .card:hover .card-body .testimonial,
+        .container .row .card:hover .card-body .name,
+        .container .row .card:hover .card-body .card-img img {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        @media (max-width: 991.5px) {
+            body::after {
+                clip-path: circle(40% at 10% 50%);
+            }
+            body::before {
+                clip-path: circle(50% at right -10%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-img pt-2 pb-3"> <img src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""> </div>
+                        <div class="name h5">Lisa Stephen</div>
+                        <div class="testimonial">I made back the purchase price in just 48 hours! Thank you for making pain less, pleasant. The service was excellent. I will refer everyone I know</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-img pt-2 pb-3"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""> </div>
+                        <div class="name h5">Hermione Granger</div>
+                        <div class="testimonial">I made back the purchase price in just 48 hours! Thank you for making pain less, pleasant. The service was excellent. I will refer everyone I know</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-img pt-2 pb-3"> <img src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""> </div>
+                        <div class="name h5">Millie Bobby</div>
+                        <div class ="testimonial">I made back the purchase price in just 48 hours! Thank you for making pain less, pleasant. The service was excellent. I will refer everyone I know</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-img pt-2 pb-3"> <img src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""> </div>
+                        <div class="name h5">Millie Bobby</div>
+                        <div class ="testimonial">I made back the purchase price in just 48 hours! Thank you for making pain less, pleasant. The service was excellent. I will refer everyone I know</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-img pt-2 pb-3"> <img src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""> </div>
+                        <div class="name h5">Millie Bobby</div>
+                        <div class ="testimonial">I made back the purchase price in just 48 hours! Thank you for making pain less, pleasant. The service was excellent. I will refer everyone I know</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-img pt-2 pb-3"> <img src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""> </div>
+                        <div class="name h5">Millie Bobby</div>
+                        <div class ="testimonial">I made back the purchase price in just 48 hours! Thank you for making pain less, pleasant. The service was excellent. I will refer everyone I know</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

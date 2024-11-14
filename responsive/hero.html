@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing:inherit
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /*font-size:  16px;*/
+    line-height: 1.7;
+    color: #777777;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient( 
+        to right bottom, 
+        rgba(126, 213, 111, 0.8), 
+        rgba(40, 180, 131, 0.8) ), 
+        url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1140&q=80);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon( 0 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+}
+
+.header__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.logo{
+    height: 3.5rem;
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 4.5rem;
+}
+.heading-primary--main, .heading-primary--sub{ display: block;}
+
+.heading-primary--main{ 
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name:  moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function:ease-out;
+  }
+
+.heading-primary--sub{ 
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name:  moveInRight;
+    animation-duration: 1s;
+    animation-timing-function:ease-out;
+}
+
+.header__text-box{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    
+    backface-visibility: hidden;
+}
+
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moveInTop{
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+ 
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited
+{
+text-transform: uppercase;
+text-decoration: none;
+padding: 1.5rem 4rem;
+display: inline-block;
+border-radius: 10rem;
+transition: all .2s;
+position: relative;
+font-size: 1.6rem;
+
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+     
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.btn--white{
+    background-color: white;
+    color:#777777;
+    animation: moveInTop .75s ease-out .5s;
+    animation-fill-mode: backwards;
+}
+
+.btn::after{
+content:"";
+display:inline-block;
+height:100%;
+width:100%;
+border-radius: 10rem;
+position: absolute;
+top:0;
+left:0;
+z-index: -1;
+transition: all .4s;
+
+}
+
+.btn--white::after{
+    background-color: white;
+}
+
+.btn--white:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>Natours | Exciting tours for adventurous people</title>
+    </head>
+    <body>
+        
+        <header class="header">
+            <div class="header__logo-box">
+                <img src ="" alt="Logo" class="header__logo" />
+            </div>
+            <div class="header__text-box">
+                <h1 class="heading-primary" >
+                    <span class="heading-primary--main">Out Doors</span> 
+                    <span class="heading-primary--sub">is where life happens</span>
+                </h1>
+
+                <a href="#" class="btn btn--white"> Discover Our Tours</a>
+            </div>
+        </header>
+        
+    </body>
+</html>
+
+</html>

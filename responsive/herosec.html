@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #81afbd;
+}
+
+.img-reveal {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  overflow: hidden;
+}
+.img-reveal img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.img-reveal__title {
+  position: relative;
+  font-family: "Prata", serif;
+  font-size: 6.25vw;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(80px);
+  z-index: 2;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="img-reveal">
+  
+        <h1 class="img-reveal__title">Heads held high</h1>
+        <img src="https://images.unsplash.com/photo-1660331690336-159d9f1383de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+      </div>
+
+      <script>
+        const tl = gsap.timeline({defaults: {duration: 1.15, ease: 'power3.inOut'}});
+const reveal = document.querySelector('.img-reveal')
+const img = document.querySelector('.img-reveal img')
+const title = document.querySelector('.img-reveal__title')
+
+tl.to(reveal, {clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'})
+tl.to(reveal, {clipPath: 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)'})
+tl.to(reveal, {clipPath: 'polygon(100% 0%, 0% 0%, 0% 0%, 100% 0%)', duration: 0}, '>')
+tl.to(img, {scale: 1.2, duration: 0}, '>')
+tl.to(reveal, {clipPath: 'polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)'})
+tl.to(img, {scale: 1}, '<')
+tl.to(title, {opacity: 1, y: 0, duration: 1.2, ease: 'Power4.inOut'}, '-=.8')
+      </script>
+</body>
+</html>

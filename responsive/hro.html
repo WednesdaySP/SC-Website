@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hero Section</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            padding: 20px; /* Adjust the padding as needed for smaller screens */
+            background-color: white;
+            border: 2px solid black;
+            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+        }
+
+        .image-container {
+            flex: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto; /* Prevent image distortion */
+        }
+
+        .content-container {
+            flex: 1;
+            padding: 20px; /* Adjust the padding as needed for smaller screens */
+        }
+
+        h1 {
+            font-size: 24px; /* Decrease font size for smaller screens */
+            margin-bottom: 10px; /* Adjust margins as needed */
+        }
+
+        p {
+            font-size: 16px; /* Decrease font size for smaller screens */
+            margin-bottom: 20px; /* Adjust margins as needed */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 15px; /* Adjust button size as needed */
+            font-size: 16px; /* Decrease font size for smaller screens */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Media query for screens smaller than 768px */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column; /* Stack image and content on top of each other */
+            }
+
+            .image-container {
+                margin-bottom: 0; /* Remove margin between image and content */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-section">
+        <div class="image-container">
+            <img src="dell1.png" alt="Laptop Image">
+        </div>
+        <div class="content-container">
+            <h1>Welcome to Our Website</h1>
+            <p>Explore amazing features and discover a new world of technology.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+</body>
+
+</html>
