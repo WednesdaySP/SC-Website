@@ -22,9 +22,9 @@ This project was developed during the second year of my studies, using front-end
 - **JavaScript**: For theme toggling and interactivity.
 - **Bootstrap 5**: For responsive design and pre-built components.
 
-## Project Link
+<!-- ## Project Link
 
-[Star Computers - Live Site](https://starcomputersjp.000webhostapp.com/)
+[Star Computers - Live Site](https://starcomputersjp.000webhostapp.com/) -->
 
 ## Installation & Setup
 
